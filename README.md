@@ -14,8 +14,8 @@ To check that you can run the command:  <br>
 Git does not sync hooks across clones so you either have to commit the hook to a shared folder or install it locally.
 
 ### Shared folder setup
-1. Create a ```.githooks``` directory in the root of your repo and add the 2 files
-```.githooks/prepare-commit-hook```
+1. Create a ```.githooks``` directory in the root of your repo and add the 2 files  <br>
+```.githooks/prepare-commit-hook```  <br>
 ```.githooks/commit-hook.java```
 
 2. Allow the hook to execute
