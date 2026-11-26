@@ -7,7 +7,8 @@ The hook prepends the issue number to each commit done in order to create greate
 
 ## Requirement
 * The hook runs on Java 11 or higher, ensure you have it installed and added to your PATH
-To check that you can run the command:\ ```java -version```
+To check that you can run the command: 
+```java -version```
 
 ## Setup
 Git does not sync hooks across clones so you either have to commit the hook to a shared folder or install it locally.
