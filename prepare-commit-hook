@@ -1,0 +1,4 @@
+#!/bin/sh
+
+HOOK_DIR="$(dirname "$0")"
+exec java --source 11 "$HOOK_DIR/commit-hook.java" "$@"
