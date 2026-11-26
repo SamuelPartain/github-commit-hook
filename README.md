@@ -1,27 +1,28 @@
 ## Automatic Issue Number Hook
 
 client-side git hook based on Java that automatically reads an issue number from your branch name.
-This hook assumes that branch names look like this: "<issue-number>-name". For example: 10-QR-scanner
+This hook assumes that branch names look like this: "**issueNumber**-name". For example: 10-QR-scanner
 
 The hook prepends the issue number to each commit done in order to create greated traceability between issues and commits.
 
 ## Requirement
-* The hook runs on Java 11 or higher, ensure you have it installed and added to your PATH
-To check that you can run the command: ```java -version```
+* The hook runs on Java 11 or higher, ensure you have it installed and added to your PATH  <br>
+To check that you can run the command:  <br>
+```java -version```
 
 ## Setup
 Git does not sync hooks across clones so you either have to commit the hook to a shared folder or install it locally.
 
 ### Shared folder setup
-1. Create a ```.githooks``` directory in the root of your repo and add the 2 files
-```.githooks/prepare-commit-hook```
+1. Create a ```.githooks``` directory in the root of your repo and add the 2 files  <br>
+```.githooks/prepare-commit-msg```  <br>
 ```.githooks/commit-hook.java```
 
-2. Allow the hook to execute
+2. Allow the hook to execute:  <br>
 ```chmod +x .githooks/prepare-commit-msg```
 
-3. Instruct Git to use ```.githooks``` in this repo
-Keep in mind this must be run by each developer once after cloning the repo
+3. Instruct Git to use ```.githooks``` in this repo.  <br>
+Keep in mind this must be run by each developer once after cloning the repo:  <br>
 ```git config core.hooksPath```
 
 ### Local setup
