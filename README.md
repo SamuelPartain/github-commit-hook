@@ -1,7 +1,7 @@
 ## Automatic Issue Number Hook
 
 client-side git hook based on Java that automatically reads an issue number from your branch name.
-This hook assumes that branch names look like this: "<issue-number>-name". For example: 10-QR-scanner
+This hook assumes that branch names look like this: "**issue-number**-name". For example: 10-QR-scanner
 
 The hook prepends the issue number to each commit done in order to create greated traceability between issues and commits.
 
