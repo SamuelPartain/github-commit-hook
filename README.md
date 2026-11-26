@@ -18,11 +18,11 @@ Git does not sync hooks across clones so you either have to commit the hook to a
 ```.githooks/prepare-commit-hook```  <br>
 ```.githooks/commit-hook.java```
 
-2. Allow the hook to execute
+2. Allow the hook to execute:  <br>
 ```chmod +x .githooks/prepare-commit-msg```
 
-3. Instruct Git to use ```.githooks``` in this repo
-Keep in mind this must be run by each developer once after cloning the repo
+3. Instruct Git to use ```.githooks``` in this repo.  <br>
+Keep in mind this must be run by each developer once after cloning the repo:  <br>
 ```git config core.hooksPath```
 
 ### Local setup
