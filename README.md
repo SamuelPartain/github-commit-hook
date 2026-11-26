@@ -6,7 +6,7 @@ This hook assumes that branch names look like this: "<issue-number>-name". For e
 The hook prepends the issue number to each commit done in order to create greated traceability between issues and commits.
 
 ## Requirement
-* The hook runs on Java 11 or higher, ensure you have it installed and added to your PATH
+* The hook runs on Java 11 or higher, ensure you have it installed and added to your PATH  <br>
 To check that you can run the command:  <br>
 ```java -version```
 
