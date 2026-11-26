@@ -1,13 +1,11 @@
-#!/usr/bin/env -S java --source 11
-
 import java.nio.fil.*;
 import java.util.regex.*;
 
 
 public class commitHook {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception{
     // Checks and skips commits that are merges or squashes
-    if(args.lengh < 1 && ("merge".equals)(args) || "squash".equals(args))) {
+    if(args.length < 1 || (args.length > 1 && ("merge".equals(args[1]) || "squash".equals(args[1])))) {
       return;
     }
     
@@ -19,7 +17,7 @@ public class commitHook {
     String branchName = new String(process.getInputStream().readAllBytes()).trim();
 
     // Matches branch name against regex pattern
-    Mather match = Pattern.compile("^(\\d+)-").matcher(branchName);
+    Matcher match = Pattern.compile("^(\\d+)-").matcher(branchName);
 
     // Checks if branch name starts with a number followed by dash
     if(!match.find()) {
@@ -28,7 +26,7 @@ public class commitHook {
 
     // instansiate prefix commit with issue number to improve traceability
     String prefix = "#" + match.group(1);
-    Path msgPath = Path.get(args);
+    Path msgPath = Paths.get(args[0]);
     String msg = Files.readString(msgPath);
 
     // Appends issue number to commit message if that is not already manually added
