@@ -7,7 +7,7 @@ The hook prepends the issue number to each commit done in order to create greate
 
 ## Requirement
 * The hook runs on Java 11 or higher, ensure you have it installed and added to your PATH
-To check that you can run the command:<br>
+To check that you can run the command:  <br>
 ```java -version```
 
 ## Setup
