@@ -25,6 +25,10 @@ Git does not sync hooks across clones so you either have to commit the hook to a
 Keep in mind this must be run by each developer once after cloning the repo:  <br>
 ```git config core.hooksPath```
 
+If you are running into issues here, ensure that you set a hooksPath:  <br>
+```git config core.hooksPath .githooks```
+
+
 ### Local setup
 1. place ```prepare-commit-hook``` and ```commit-hook.java``` in ```.git/hooks/``` for your local repository
 
